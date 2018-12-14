@@ -1,6 +1,11 @@
+
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '4.0.3'
+    
 }
+
+apply plugin: 'java'
 
 group 'com.boilerr.templategradlecli'
 version '1.0-SNAPSHOT'
@@ -22,3 +27,15 @@ dependencies {
 
 
 }
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.boilerr.templategradlecli.Main'
+        )
+    }
+}
+
+
+
+
